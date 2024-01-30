@@ -14,7 +14,7 @@ namespace GrantTotinovKA1
             InitializeComponent();
 
             combobox.Items.Add("Целичислени");
-            combobox.Items.Add("Char");
+            combobox.Items.Add("Символен");
             combobox.SelectedIndex = 0;
         }
 
@@ -29,9 +29,14 @@ namespace GrantTotinovKA1
                     MessageBox.Show("Моля въведете валидни елементи", "Error");
                     return;
                 }
-                if (n <= 0 || k <= 0 || k > n || k == n)
+                if (n <= 0)
                 {
-                    MessageBox.Show("Моля въведете валидно числа за реда на елементите", "Error");
+                    MessageBox.Show("Моля въведете валидно числo за n", "Error");
+                    return;
+                }
+                if (k <= 0 || k > n || k == n)
+                {
+                    MessageBox.Show("Моля въведете валидно числo за k", "Error");
                     return;
                 }
                 List<string> variations;
