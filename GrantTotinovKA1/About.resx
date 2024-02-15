@@ -117,7 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Програма за генериране на вариации на n еленента ит k-ти клас
+
+Инструкции:
+1) Изберете от падащото меню (вид на елементите), какъв тип елементи желаете да бъдат генерирани/
+2) В полето (брой елементи) запишете броя на елементите(числото трябва да е различно от 0).
+3) В полето (номер на класа) запишете от кой клас желаете да бъде генерираната вариация(номера на класа трябва да бъде по малък от броя на елементите).
+
+Version1.0</value>
+  </data>
 </root>

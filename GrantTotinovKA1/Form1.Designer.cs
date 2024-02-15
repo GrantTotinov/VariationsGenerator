@@ -38,6 +38,10 @@
             label3 = new Label();
             countlabel = new Label();
             label4 = new Label();
+            menuStrip1 = new MenuStrip();
+            aboutToolStripMenuItem1 = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // elementtxtbox
@@ -111,9 +115,9 @@
             label3.Font = new Font("Times New Roman", 9.75F, FontStyle.Bold);
             label3.Location = new Point(12, 224);
             label3.Name = "label3";
-            label3.Size = new Size(98, 15);
+            label3.Size = new Size(120, 15);
             label3.TabIndex = 7;
-            label3.Text = "ОТ КОЙ КЛАС ";
+            label3.Text = "НОМЕР НА КЛАСА";
             // 
             // countlabel
             // 
@@ -131,11 +135,35 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
-            label4.Location = new Point(12, 9);
+            label4.Location = new Point(0, 24);
             label4.Name = "label4";
             label4.Size = new Size(490, 19);
             label4.TabIndex = 9;
             label4.Text = "Генератор на вариации без повторения от k-ти клас на n елемента";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { aboutToolStripMenuItem1 });
+            menuStrip1.Location = new Point(406, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(60, 24);
+            menuStrip1.TabIndex = 10;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            aboutToolStripMenuItem1.Size = new Size(52, 20);
+            aboutToolStripMenuItem1.Text = "About";
+            aboutToolStripMenuItem1.Click += aboutToolStripMenuItem1_Click;
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Font = new Font("Segoe UI Light", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(32, 19);
+            aboutToolStripMenuItem.Text = "About";
             // 
             // Form1
             // 
@@ -153,8 +181,15 @@
             Controls.Add(generatebutton);
             Controls.Add(classtxtbox);
             Controls.Add(elementtxtbox);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
+            MaximumSize = new Size(527, 449);
+            MinimumSize = new Size(527, 449);
             Name = "Form1";
             Text = "Grant Totinov KST 5235";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,5 +206,8 @@
         private Label label3;
         private Label countlabel;
         private Label label4;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem aboutToolStripMenuItem1;
+        private ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

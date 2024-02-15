@@ -13,7 +13,7 @@ namespace GrantTotinovKA1
         {
             InitializeComponent();
 
-            combobox.Items.Add("Целичислени");
+            combobox.Items.Add("Целочислен");
             combobox.Items.Add("Символен");
             combobox.SelectedIndex = 0;
         }
@@ -31,12 +31,12 @@ namespace GrantTotinovKA1
                 }
                 if (n <= 0)
                 {
-                    MessageBox.Show("Моля въведете валидно числo за n", "Error");
+                    MessageBox.Show("Моля въведете валидно числo за броя на елементите", "Error");
                     return;
                 }
                 if (k <= 0 || k > n || k == n)
                 {
-                    MessageBox.Show("Моля въведете валидно числo за k", "Error");
+                    MessageBox.Show("Моля въведете валидно числo за класа", "Error");
                     return;
                 }
                 List<string> variations;
@@ -50,13 +50,19 @@ namespace GrantTotinovKA1
                     variations = GenerateVariations(n, k, Enumerable.Range(0, n).Select(x => ((char)(startChar + x)).ToString()));
                 }
 
-                resulttxtbox.Text = string.Join(Environment.NewLine, variations); 
+                resulttxtbox.Text = string.Join(Environment.NewLine, variations);
                 countlabel.Text = $"Броят на вариациите без повторение са: {count}";
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Грешка при процеса: {ex.Message}", "Error");
             }
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            About about = new();
+            about.ShowDialog();
         }
 
         private List<string> GenerateVariations<T>(int n, int k, IEnumerable<T> elements)
