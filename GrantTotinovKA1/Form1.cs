@@ -24,9 +24,14 @@ namespace GrantTotinovKA1
             {
                 int n, k;
 
-                if (!int.TryParse(elementtxtbox.Text, out n) || !int.TryParse(classtxtbox.Text, out k))
+                if (!int.TryParse(elementtxtbox.Text, out n))
                 {
-                    MessageBox.Show("Моля въведете валидни елементи", "Error");
+                    MessageBox.Show("Моля въведете число за броя на елементите", "Error");
+                    return;
+                }
+                if (!int.TryParse(classtxtbox.Text, out k))
+                {
+                    MessageBox.Show("Моля въведете число за номер на класа", "Error");
                     return;
                 }
                 if (n <= 0)
@@ -67,8 +72,8 @@ namespace GrantTotinovKA1
 
         private List<string> GenerateVariations<T>(int n, int k, IEnumerable<T> elements)
         {
-            //List<string> result = new();
-            List<string> result = []; //po optimiziran variant
+            List<string> result = new();
+            
             count = 0;
 
             List<List<T>> variations = GenerateVariationsRecursive(new List<T>(elements), k);
@@ -84,8 +89,8 @@ namespace GrantTotinovKA1
 
         private List<List<T>> GenerateVariationsRecursive<T>(List<T> elements, int k)
         {
-            //List<List<T>> result = new();
-            List<List<T>> result = []; //po optimiziran variant
+            List<List<T>> result = new();
+            
 
             try
             {
